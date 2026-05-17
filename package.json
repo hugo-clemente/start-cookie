@@ -18,7 +18,7 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@tanstack/react-start": ">=1.168.0"
+    "@tanstack/react-start": "^1"
   },
   "publishConfig": {
     "access": "public",

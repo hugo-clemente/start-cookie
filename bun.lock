@@ -13,7 +13,7 @@
         "unrun": "^0.3.0",
       },
       "peerDependencies": {
-        "@tanstack/react-start": ">=1.168.0",
+        "@tanstack/react-start": "^1",
       },
     },
   },

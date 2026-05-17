@@ -7,7 +7,7 @@ bun add start-cookie
 # or: pnpm / npm / yarn add start-cookie
 ```
 
-Peer dependency: `@tanstack/react-start >= 1.168.0`.
+Peer dependency: `@tanstack/react-start@^1`.
 
 ## Usage
 
