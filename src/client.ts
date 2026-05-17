@@ -1,4 +1,4 @@
-import type { CookieOptions } from './types'
+import type { CookieOptions, RemoveCookieOptions } from './types'
 
 export function parseDocumentCookies(source: string): Record<string, string> {
   const out: Record<string, string> = {}
@@ -60,4 +60,22 @@ export function serializeCookie(
   }
 
   return parts.join('; ')
+}
+
+export function clientGet(name: string): string | undefined {
+  if (typeof document === 'undefined') return undefined
+  return parseDocumentCookies(document.cookie)[name]
+}
+
+export function clientSet(
+  name: string,
+  value: string,
+  options?: CookieOptions,
+): void {
+  if (typeof document === 'undefined') return
+  document.cookie = serializeCookie(name, value, options)
+}
+
+export function clientRemove(name: string, options?: RemoveCookieOptions): void {
+  clientSet(name, '', { ...options, maxAge: 0 })
 }
