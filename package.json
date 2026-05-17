@@ -5,10 +5,15 @@
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "tsdown",
-    "check": "tsdown --attw --publint",
+    "check": "tsdown --publint",
     "test": "bun test",
     "typecheck": "tsc --noEmit"
   },
@@ -18,7 +23,18 @@
   "devDependencies": {
     "@tanstack/react-start": "^1.168.0",
     "@types/bun": "latest",
+    "publint": "^0.3.21",
     "tsdown": "^0.22.0",
     "typescript": "^5.6.0"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
   }
 }

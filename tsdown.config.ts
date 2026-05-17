@@ -9,5 +9,8 @@ export default defineConfig({
     packageJson: true,
     legacy: true,
   },
+  deps: {
+    neverBundle: [/^@tanstack\//],
+  },
   clean: true,
 })
