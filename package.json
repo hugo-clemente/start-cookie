@@ -1,6 +1,6 @@
 {
   "name": "start-cookie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny isomorphic cookie helper for TanStack Start.",
   "license": "MIT",
   "type": "module",
